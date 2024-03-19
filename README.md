@@ -44,9 +44,9 @@ directory for faster setup.
 ### Create and configure a virtual environment
 
 ```bash
-   python -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
+   foo@bar:~$ python -m venv venv
+   foo@bar:~$ source venv/bin/activate
+   foo@bar:~$ pip install -r requirements.txt
 ```
 
 ## Usage
@@ -61,13 +61,13 @@ You can also run the code via `main.py`.
 You can check the required parameters by running the following command:
 
 ```bash
-   python main.py --help
+   foo@bar:~$ python main.py --help
 ```
 
 #### Running example
 
 ```bash
-   python main.py --query "<MovieTitle><MovieSummary>" -k 5 --data-dir "data" --embeddings-path "data/embeddings.npy" --faiss-index-path "data/movies.index"
+   foo@bar:~$ python main.py --query "<MovieTitle><MovieSummary>" -k 5 --data-dir "data" --embeddings-path "data/embeddings.npy" --faiss-index-path "data/movies.index"
 ```
 You can also try to get recommendations with a custom query message, but expect results to be less accurate.
 
@@ -83,13 +83,13 @@ foo@bar:~$ pytest --cov=. --cov-report=html
 ### Generate documentation
 
 ```bash
-pip install sphinx
-pip install sphinx-rtd-theme
-mkdir docs
-cd docs
-sphinx-quickstart (separate build n)
-cd ..
-sphinx-apidoc -o docs src
-cd docs
-sphinx-build -b ht,m -v . _build
+foo@bar:~$ pip install sphinx
+foo@bar:~$ pip install sphinx-rtd-theme
+foo@bar:~$ mkdir docs
+foo@bar:~$ cd docs
+foo@bar:~$ sphinx-quickstart (separate build n)
+foo@bar:~$ cd ..
+foo@bar:~$ sphinx-apidoc -o docs src
+foo@bar:~$ cd docs
+foo@bar:~$ sphinx-build -b html -v . _build
 ```
